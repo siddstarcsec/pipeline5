@@ -33,7 +33,7 @@ public class HelloVulnServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         // ---- Reflected XSS vulnerability ----
-        String name = request.getParameter("name");
+        String name = request.getParameter("names");
         if (name == null) name = "World12";
 
         out.println("<h1>Hello, " + name + "!</h1>");
